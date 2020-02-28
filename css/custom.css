@@ -1,0 +1,21 @@
+body {
+	transition: 0.3s;
+}
+
+#main-nav {
+	transition: 0.3s;
+}
+
+.main {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.maintenance {
+	width: auto;
+	height: 50vh;
+}
+
+.nav-item {
+	text-align: right;
+}
