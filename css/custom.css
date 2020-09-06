@@ -6,12 +6,12 @@ html {
 	scroll-behavior: smooth;
 }
 
-* {
-	user-select: none;
-}
-
 body, #main-nav {
 	transition: 0.2s;
+}
+
+footer, #main-nav {
+	user-select: none;
 }
 
 label {
@@ -26,11 +26,12 @@ a:hover {
 	color: #bfbfbf;
 }
 
-/* @media screen and (max-width: 300px) {
+@media screen and (max-width: 300px) {
 	.navbar-brand {
-
+		width: 0px;
+		overflow: hidden;
 	}
-} */
+}
 
 .nav-item {
 	text-align: right;
