@@ -14,3 +14,19 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
+
+#darkSwitch {
+	display: none;
+}
+
+#darkLabel {
+	cursor: pointer;
+}
+
+#darkLabel::after {
+	content: "🌙";
+}
+
+#darkSwitch:checked ~ #darkLabel::after {
+	content: "☀️";
+}

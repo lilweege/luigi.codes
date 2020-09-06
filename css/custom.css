@@ -1,25 +1,34 @@
-body {
-	transition: 0.2s;
+[id] {
+	scroll-margin-top: 56px;
 }
 
-#main-nav {
-	transition: 0.2s;
+html {
+	scroll-behavior: smooth;
 }
 
-.main {
-  padding: 5rem 1.5rem;
-  text-align: center;
-}
-
-.maintenance {
-	width: auto;
-	height: 50vh;
-}
-
-#main-nav {
+* {
 	user-select: none;
 }
 
+body, #main-nav {
+	transition: 0.2s;
+}
+
+label {
+	margin: 0 0;
+}
+
+/* @media screen and (max-width: 300px) {
+	.navbar-brand {
+
+	}
+} */
+
 .nav-item {
 	text-align: right;
+}
+
+.section {
+	margin-top: 10em;
+	margin-bottom: 10em;
 }
