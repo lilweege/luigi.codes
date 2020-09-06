@@ -18,6 +18,14 @@ label {
 	margin: 0 0;
 }
 
+a {
+	color: #808080;
+}
+
+a:hover {
+	color: #bfbfbf;
+}
+
 /* @media screen and (max-width: 300px) {
 	.navbar-brand {
 
