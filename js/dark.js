@@ -1,5 +1,5 @@
 const darkSwitch = document.getElementById('darkSwitch');
-let mainNav = document.getElementById("main-nav");
+const mainNav = document.getElementById("main-nav");
 
 window.addEventListener('load', () => {
 	if (darkSwitch) {
