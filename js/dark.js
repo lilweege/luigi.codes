@@ -14,12 +14,16 @@ const setTheme = () => {
 		localStorage.setItem('darkSwitch', 'dark');
 		document.body.setAttribute('data-theme', 'dark');
 		mainNav.classList.remove("navbar-light");
+		mainNav.classList.remove("bg-light");
 		mainNav.classList.add("navbar-dark");
+		mainNav.classList.add("bg-dark");
 	}
 	else {
 		localStorage.removeItem('darkSwitch');
 		document.body.removeAttribute('data-theme');
 		mainNav.classList.remove("navbar-dark");
+		mainNav.classList.remove("bg-dark");
 		mainNav.classList.add("navbar-light");
+		mainNav.classList.add("bg-light");
 	}
 }
