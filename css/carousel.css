@@ -12,7 +12,7 @@
 	height: 100vh;
 }
 
-.carousel-item > img {
+.carousel-item img {
 	position: absolute;
 	top: 0;
 	left: 0;

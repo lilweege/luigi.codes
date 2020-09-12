@@ -41,3 +41,30 @@ a:hover {
 	margin-top: 10em;
 	margin-bottom: 10em;
 }
+
+.link {
+	display: inline-block;
+	position: relative;
+}
+.link a {
+	text-decoration: none;
+}
+
+.link::after, .link svg {
+	transition: 0.1s;
+}
+
+.link::after {
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	transform: translateX(-50%) translateY(100%);
+	content: attr(data-tooltip);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.link:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
