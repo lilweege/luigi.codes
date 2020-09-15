@@ -1,0 +1,32 @@
+.nav-item {
+	position: relative;
+}
+
+.nav-dropdown {
+	left: 50%;
+	transform: translate(-50%);
+	display: block;
+	position: absolute;
+	text-align: center;
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.nav-dropdown a {
+	padding: 0.4em 0.4em;
+	word-wrap: normal;
+	text-decoration: none;
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-item:hover .nav-dropdown {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.nav-dropdown {
+		display: block;
+	}
+}
