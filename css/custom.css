@@ -1,5 +1,23 @@
+:root {
+	--main-highlight-color: #999aff;
+	--main-text-color: #808080;
+	--main-hover-color: #bfbfbf;
+}
+
+img {
+	user-select: none;
+}
+
 [id] {
 	scroll-margin-top: 56px;
+}
+
+::selection {
+	background: var(--main-highlight-color);
+}
+
+::moz-selection {
+	background: var(--main-highlight-color);
 }
 
 html {
@@ -19,11 +37,11 @@ label {
 }
 
 a {
-	color: #808080;
+	color: var(--main-text-color);
 }
 
 a:hover {
-	color: #bfbfbf;
+	color: var(--main-hover-color);
 }
 
 @media screen and (max-width: 300px) {
@@ -35,6 +53,10 @@ a:hover {
 
 .nav-item {
 	text-align: right;
+}
+
+.nav-link.special:hover {
+	color: var(--main-highlight-color) !important;
 }
 
 .section {
