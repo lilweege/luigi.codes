@@ -53,4 +53,15 @@ window.addEventListener('load', () => {
 			// })
 		}
 	}
+	const pdfSelectors4 = document.getElementsByClassName("DP-4-pdf-selector")
+	const pdfFrame4 = document.getElementById("DP-4-frame")
+	const pdfLink4 = document.getElementById("DP-4-link")
+	for (const selector of pdfSelectors4) {
+		if (selector.dataset.src) {
+			selector.addEventListener("click", e => {
+				pdfFrame4.src = selector.dataset.src
+				pdfLink4.href = selector.dataset.src
+			})
+		}
+	}
 })
