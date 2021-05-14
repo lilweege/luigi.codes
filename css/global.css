@@ -1,0 +1,48 @@
+/* general styling */
+
+:root {
+	--col-neutral-100: white;
+	--col-neutral-200: #eee;
+	--col-neutral-400: #393e46;
+	--col-neutral-800: #232931;
+	--col-neutral-900: black;
+	--col-accent-100: #dff;
+	--col-accent-400: #46a;
+	--col-accent-900: #223;
+}
+
+:root {
+	--col-bg: var(--col-neutral-200);
+	--col-text: var(--col-neutral-800);
+}
+
+:root [data-theme='dark'] {
+	--col-bg: var(--col-neutral-800);
+	--col-text: var(--col-neutral-200);
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--col-bg);
+	color: var(--col-text);
+	transition:
+		color 200ms,
+		background-color 200ms;
+}
+
+
+/* dark switch */
+
+#darkLabel::after {
+	cursor: pointer;
+	content: attr(data-unchecked);
+}
+
+#darkSwitch:checked ~ #darkLabel::after{
+	content: attr(data-checked);
+}
