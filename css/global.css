@@ -3,22 +3,43 @@
 :root {
 	--col-neutral-100: white;
 	--col-neutral-200: #eee;
-	--col-neutral-400: #393e46;
+	--col-neutral-500: #393e46;
 	--col-neutral-800: #232931;
 	--col-neutral-900: black;
-	--col-accent-100: #dff;
-	--col-accent-400: #46a;
-	--col-accent-900: #223;
+	--col-accent-200: #aff;
+	--col-accent-300: #7dd;
+	--col-accent-400: #91aff1;
+	--col-accent-500: #737fc5;
+	--col-accent-600: #7c69c2;
+	--col-accent-700: #6a44a7;
+	--col-accent-900: #34273a;
+
+	--transition: 200ms;
+	--transition-fast: 100ms;
 }
 
 :root {
 	--col-bg: var(--col-neutral-200);
 	--col-text: var(--col-neutral-800);
+	--col-link: var(--col-accent-900);
+	--col-link-hover: var(--col-accent-700);
+	--col-selection: var(--col-accent-400);
 }
 
 :root [data-theme='dark'] {
 	--col-bg: var(--col-neutral-800);
 	--col-text: var(--col-neutral-200);
+	--col-link: var(--col-neutral-200);
+	--col-link-hover: var(--col-accent-300);
+	--col-selection: var(--col-accent-600);
+}
+
+::selection {
+	background: var(--col-selection);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -28,21 +49,15 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Courier Prime', monospace;
+	font-size: clamp(1em, 2.75vw, 1.3em);
 	background-color: var(--col-bg);
 	color: var(--col-text);
 	transition:
-		color 200ms,
-		background-color 200ms;
+		color var(--transition),
+		background-color var(--transition);
 }
 
-
-/* dark switch */
-
-#darkLabel::after {
-	cursor: pointer;
-	content: attr(data-unchecked);
-}
-
-#darkSwitch:checked ~ #darkLabel::after{
-	content: attr(data-checked);
-}
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }

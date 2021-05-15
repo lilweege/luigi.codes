@@ -1,0 +1,18 @@
+
+main {
+    padding-top: 4em;
+}
+
+article, footer {
+    margin: 0 auto;
+    padding: 1.5em;
+    max-width: 80ch;
+}
+
+section:first-of-type {
+    scroll-margin-top: 999em;
+}
+
+section {
+    margin-bottom: 10em;
+}

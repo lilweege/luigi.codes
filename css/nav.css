@@ -1,0 +1,104 @@
+/* dark switch */
+
+#darkSwitch {
+	/* display: none; */
+	opacity: 0;
+	width: 0;
+	margin: 0;
+}
+
+#darkLabel {
+	position: relative;
+}
+
+#darkLabel::after {
+	cursor: pointer;
+	content: attr(data-unchecked);
+	transition: 100ms;
+	position: absolute;
+}
+
+#darkSwitch:checked ~ #darkLabel::after {
+	content: attr(data-checked);
+}
+
+#darkSwitch:hover ~ #darkLabel::after,
+#darkSwitch:focus ~ #darkLabel::after,
+#darkLabel:hover ~ #darkLabel::after,
+#darkLabel:focus ~ #darkLabel::after {
+	transform: scale(1.25);
+}
+
+/* nav stuff */
+
+html {
+	scroll-padding-top: 6em;
+}
+
+nav {
+	position: fixed;
+	padding: 1em 1.5em;
+	line-height: 2em;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+nav::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--col-bg);
+	z-index: -1;
+	opacity: 0.75;
+	transition: var(--transition);
+}
+
+nav > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	float: right;
+}
+
+nav > ul > li:not(:last-child) {
+	padding-right: 2em;
+}
+
+nav > ul > li > a {
+	color: var(--col-link);
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	outline: 0;
+	transition: var(--transition);
+}
+
+
+nav > ul > li > a:focus,
+nav > ul > li > a:hover {
+	color: var(--col-link-hover);
+}
+
+nav > ul > li > a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	height: .15em;
+	border-radius: 999em;
+	transform: translate(-50%, 100%);
+	background-color: var(--col-link-hover);
+	pointer-events: none;
+	transition: var(--transition-fast);
+}
+
+nav > ul > li > a:hover::before,
+nav > ul > li > a:focus::before {
+	width: 100%;
+}
