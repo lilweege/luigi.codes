@@ -65,12 +65,8 @@ nav > ul {
 	float: right;
 }
 
-nav > ul > li:not(:last-child) {
-	padding-right: 2em;
-}
-
 nav > ul > li > a {
-	color: var(--col-link);
+	color: var(--col-text);
 	text-decoration: none;
 	cursor: pointer;
 	position: relative;
@@ -101,4 +97,49 @@ nav > ul > li > a::before {
 nav > ul > li > a:hover::before,
 nav > ul > li > a:focus::before {
 	width: 100%;
+}
+
+
+
+nav > ul > li {
+	padding-left: 1.5em;
+}
+
+@media screen and (max-width: 320px) {
+	nav > ul {
+		width: calc(100% - 2em);
+		justify-content: space-between;
+	}
+	nav > ul > li {
+		padding: 0;
+	}
+}
+
+nav > ul.big {
+	display: flex;
+}
+nav > ul.small {
+	display: none;
+}
+nav > ul.small > li > a > svg {
+	height: 1.7em;
+	stroke: var(--col-text);
+	fill: var(--col-text);
+	transition: var(--transition);
+}
+
+nav > ul.small > li > a:hover > svg {
+	stroke: var(--col-link-hover);
+	fill: var(--col-link-hover);
+	transition: var(--transition);
+}
+
+@media screen and (max-width: 500px) {
+	
+	nav > ul.big {
+		display: none;
+	}
+	nav > ul.small {
+		display: flex;
+	}
 }

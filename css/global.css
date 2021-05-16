@@ -8,11 +8,12 @@
 	--col-neutral-900: black;
 	--col-accent-200: #aff;
 	--col-accent-300: #7dd;
-	--col-accent-400: #91aff1;
-	--col-accent-500: #737fc5;
-	--col-accent-600: #7c69c2;
-	--col-accent-700: #6a44a7;
-	--col-accent-900: #34273a;
+	--col-accent-400: #91c6f1;
+	--col-accent-500: #608aca;
+	--col-accent-600: #3e76ca;
+	--col-accent-700: #7c69c2;
+	--col-accent-800: #5c3a92;
+	--col-accent-900: #4b1b64;
 
 	--transition: 200ms;
 	--transition-fast: 100ms;
@@ -21,25 +22,36 @@
 :root {
 	--col-bg: var(--col-neutral-200);
 	--col-text: var(--col-neutral-800);
-	--col-link: var(--col-accent-900);
-	--col-link-hover: var(--col-accent-700);
+	--col-link: var(--col-accent-800);
+	--col-link-hover: var(--col-accent-600);
 	--col-selection: var(--col-accent-400);
 }
 
 :root [data-theme='dark'] {
 	--col-bg: var(--col-neutral-800);
 	--col-text: var(--col-neutral-200);
-	--col-link: var(--col-neutral-200);
-	--col-link-hover: var(--col-accent-300);
-	--col-selection: var(--col-accent-600);
+	--col-link: var(--col-accent-400);
+	--col-link-hover: var(--col-accent-200);
+	--col-selection: var(--col-accent-700);
 }
 
 ::selection {
 	background: var(--col-selection);
 }
 
+
+
 html {
 	scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: unset;
+	}
+	:root {
+		--transition: 0ms;
+		--transition-fast: 0ms;
+	}
 }
 
 *, *::before, *::after {
@@ -61,3 +73,10 @@ body {
 h1 { font-size: 1.4em; }
 h2 { font-size: 1.3em; }
 h3 { font-size: 1.2em; }
+
+a {
+	color: var(--col-link);
+}
+a:hover {
+	color: var(--col-link-hover);
+}
