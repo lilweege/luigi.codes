@@ -14,7 +14,7 @@ const setTheme = (currentTheme) => {
 	}
 }
 
-window.addEventListener('load', () => {
+;(() => {
 	let currentTheme = localStorage.getItem(THEME)
 
 	if (!currentTheme) { // first time visitor
@@ -31,4 +31,5 @@ window.addEventListener('load', () => {
 			setTheme(darkSwitch.checked ? DARK : LIGHT)
 		})
 	}
-})
+})()
+
