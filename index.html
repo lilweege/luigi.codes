@@ -102,7 +102,8 @@
 							<br>
 							I love to combine my skills to see what I'm able to create, but I am also always ready and willing to learn and take on new challenges.<br>
 							<br>
-							Thanks for taking the time to read, Scroll down to see some of my <a href="#projects">favorite projects</a>, view my <a href="/Luigi Quattrociocchi Resume.pdf" target="_blank">resume</a>, or <a href="#contact">get in touch</a>!<br>
+							Thanks for taking the time to read!<br>
+							Scroll down to see some of my <a href="#projects">favorite projects</a>, view my <a href="/Luigi Quattrociocchi Resume.pdf" target="_blank">resume</a>, or <a href="#contact">get in touch</a>!<br>
 						</p>
 					</div>
 				</div>
@@ -115,56 +116,31 @@
 				<h1>A few things I'm proud of</h1>
 				<p class="text-center">Check out my <a href="https://github.com/lilweege/">GitHub</a> if you'd like to see more</p>
 				<div class="card-holder">
-					<!-- 
-						flex-direction: row-reverse;
-						flex-wrap: wrap-reverse;
+					<!-- flip so larger column at top while maintaining tab navigation -->
+					<style>
+						/* overrides selector in body.css */
+						.card-holder {
+							flex-direction: row-reverse !important;
+							flex-wrap: wrap-reverse !important;
+						}
 
-						this means cards will show up in reversed order
-					 -->
+						/* there has to be a better way to do this 🤷‍♂️ */
+						.card-holder > .card:nth-of-type(1) { order: 11; }
+						.card-holder > .card:nth-of-type(2) { order: 10; }
+						.card-holder > .card:nth-of-type(3) { order: 9; }
+						.card-holder > .card:nth-of-type(4) { order: 8; }
+						.card-holder > .card:nth-of-type(5) { order: 7; }
+						.card-holder > .card:nth-of-type(6) { order: 6; }
+						.card-holder > .card:nth-of-type(7) { order: 5; }
+						.card-holder > .card:nth-of-type(8) { order: 4; }
+						.card-holder > .card:nth-of-type(9) { order: 3; }
+						.card-holder > .card:nth-of-type(10) { order: 2; }
+						.card-holder > .card:nth-of-type(11) { order: 1; }
+					</style>
 					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/pace-calculator-android">Pace Calculator App</a></h3>
-						<img class="card-img" src="/img/projects/pace_calc.jpg" alt="">
-						<p class="card-body">An Android application used to convert time/distance/pace I created for my own cross country / track & field training.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/circuit-diagram-app">Circuit Diagram Quizzer</a></h3>
-						<img class="card-img" src="/img/projects/circuit_quizzer.jpg" alt="">
-						<p class="card-body">A C# windows form application that generated various circuit diagrams and will test the user to enter their own values.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/arduino-led-demo">Arduino LED Sequencer</a></h3>
-						<img class="card-img" src="/img/projects/arduino_led_sequencer.jpg" alt="">
-						<p class="card-body">An Arduino project that will read a sequence of data off an SD card, then output pattern to a strip of WS2811 LEDs.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/aio-music-aid">All-In-One Music Aid</a></h3>
-						<img class="card-img" src="/img/projects/aio_music.jpg" alt="">
-						<p class="card-body">All in one device: musical tuner, metronome, and drone. Python GUI, Arduino, 3D printed enclosure.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/javascript-astar-pathfinding">2D Maze Generator and Pathfinder</a></h3>
-						<img class="card-img" src="/img/projects/astar.jpg" alt="">
-						<p class="card-body">A* pathfinding algorithm and DFS maze generator on a 2D grid, wrapped in JS + DOM.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/ticket-to-ride-companion">Ticket to Ride companion</a></h3>
-						<img class="card-img" src="/img/projects/ticket_to_ride.png" alt="">
-						<p class="card-body">Javascript client and server communication with socket.io, google spreadsheet api to track game progress in real time.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/oh-noah-you-didnt">Oh Noah You Didn't</a></h3>
-						<img class="card-img" src="/img/projects/oh_noah.jpg" alt="">
-						<p class="card-body">An online multiplayer game created for the sheridan game-making contest. This game won the award for "best use of code".</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/dmoj-solutions">DM::OJ Solutions</a></h3>
-						<img class="card-img" src="/img/projects/dmoj.png" alt="">
-						<p class="card-body">A repository of solutions for various competitive programming problems. Most solutions are written in C++ and Python.</p>
-					</div>
-					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/wolfen-frogger">Wolfen-Frogger</a></h3>
-						<img class="card-img" src="/img/projects/wolfen_frogger.png" alt="">
-						<p class="card-body">A 2D simple world visualized in 3D using 'raycasting', created in C++ using the oneLoneCoder Pixel Game Engine.</p>
+						<h3 class="card-header"><a href="https://github.com/lilweege/a-bit-off">A Bit Off</a></h3>
+						<img class="card-img" src="/img/projects/a_bit_off.jpg" alt="">
+						<p class="card-body">An educational game created with Java Swing for ICS12U final culminating project. It teaches the basic bitwise operators.</p>
 					</div>
 					<div class="card">
 						<h3 class="card-header"><a href="https://github.com/lilweege/double-pendulum-terminal">Double Pendulum Simulation</a></h3>
@@ -172,9 +148,49 @@
 						<p class="card-body">A simple kinimatic physics simulation written in C and rendered in a terminal emulator.</p>
 					</div>
 					<div class="card">
-						<h3 class="card-header"><a href="https://github.com/lilweege/a-bit-off">A Bit Off</a></h3>
-						<img class="card-img" src="/img/projects/a_bit_off.jpg" alt="">
-						<p class="card-body">An educational game created with Java Swing for ICS12U final culminating project. It teaches the basic bitwise operators.</p>
+						<h3 class="card-header"><a href="https://github.com/lilweege/wolfen-frogger">Wolfen-Frogger</a></h3>
+						<img class="card-img" src="/img/projects/wolfen_frogger.png" alt="">
+						<p class="card-body">A 2D simple world visualized in 3D using 'raycasting', created in C++ using the oneLoneCoder Pixel Game Engine.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/dmoj-solutions">DM::OJ Solutions</a></h3>
+						<img class="card-img" src="/img/projects/dmoj.png" alt="">
+						<p class="card-body">A repository of solutions for various competitive programming problems. Most solutions are written in C++ and Python.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/oh-noah-you-didnt">Oh Noah You Didn't</a></h3>
+						<img class="card-img" src="/img/projects/oh_noah.jpg" alt="">
+						<p class="card-body">An online multiplayer game created for the sheridan game-making contest. This game won the award for "best use of code".</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/ticket-to-ride-companion">Ticket to Ride companion</a></h3>
+						<img class="card-img" src="/img/projects/ticket_to_ride.png" alt="">
+						<p class="card-body">Javascript client and server communication with socket.io, google spreadsheet api to track game progress in real time.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/javascript-astar-pathfinding">2D Maze Generator and Pathfinder</a></h3>
+						<img class="card-img" src="/img/projects/astar.jpg" alt="">
+						<p class="card-body">A* pathfinding algorithm and DFS maze generator on a 2D grid, wrapped in JS + DOM.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/aio-music-aid">All-In-One Music Aid</a></h3>
+						<img class="card-img" src="/img/projects/aio_music.jpg" alt="">
+						<p class="card-body">All in one device: musical tuner, metronome, and drone. Python GUI, Arduino, 3D printed enclosure.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/arduino-led-demo">Arduino LED Sequencer</a></h3>
+						<img class="card-img" src="/img/projects/arduino_led_sequencer.jpg" alt="">
+						<p class="card-body">An Arduino project that will read a sequence of data off an SD card, then output pattern to a strip of WS2811 LEDs.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/circuit-diagram-app">Circuit Diagram Quizzer</a></h3>
+						<img class="card-img" src="/img/projects/circuit_quizzer.jpg" alt="">
+						<p class="card-body">A C# windows form application that generated various circuit diagrams and will test the user to enter their own values.</p>
+					</div>
+					<div class="card">
+						<h3 class="card-header"><a href="https://github.com/lilweege/pace-calculator-android">Pace Calculator App</a></h3>
+						<img class="card-img" src="/img/projects/pace_calc.jpg" alt="">
+						<p class="card-body">An Android application used to convert time/distance/pace I created for my own cross country / track & field training.</p>
 					</div>
 				</div>
 			</section>

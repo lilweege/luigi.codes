@@ -58,9 +58,9 @@ h1 {
 
 .card-holder {
 	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap-reverse;
 	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .card {
@@ -73,6 +73,7 @@ h1 {
 	transition: var(--transition);
 	border-radius: .5em;
 }
+
 
 .card > .card-header,
 .card > .card-body {
@@ -97,7 +98,7 @@ h1 {
 }
 .svg-link > a {
 	text-decoration: none;
-	transition: var(--transition-fast);
+	transition: color var(--transition-fast);
 }
 
 .svg-link::after {
