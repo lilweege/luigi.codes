@@ -58,8 +58,8 @@ h1 {
 
 .card-holder {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
 	justify-content: space-around;
 }
 
