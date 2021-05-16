@@ -1,18 +1,136 @@
-
 main {
-    padding-top: 4em;
+	padding-top: 4em;
 }
 
 article, footer {
-    margin: 0 auto;
-    padding: 1.5em;
-    max-width: 80ch;
+	margin: 0 auto;
+	padding: 1.5em;
+	max-width: 100ch;
 }
 
 section:first-of-type {
-    scroll-margin-top: 999em;
+	scroll-margin-top: 999em;
 }
 
 section {
-    margin-bottom: 10em;
+	margin-bottom: 10em;
+}
+
+
+
+
+/* specific styling */
+
+/* about */
+
+.text-center,
+h1 {
+	text-align: center;   
+}
+
+.img-fluid {
+	border-radius: 50%;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-container > .flex-col {
+	margin: 0;
+	padding: 1em;
+}
+
+@media screen and (max-width: 768px)  {
+	.flex-container {
+		flex-direction: column;
+	}
+	#about img {
+		width: 66%;
+	}
+}
+
+/* projects */
+
+.card-holder {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.card {
+	text-align: center;
+	margin: 0.5em;
+	width: 12em;
+	max-width: 20em;
+	background-image: linear-gradient(to bottom, var(--col-secondary), var(--col-bg));
+	flex-grow: 1;
+	transition: var(--transition);
+	border-radius: .5em;
+}
+
+.card > .card-header,
+.card > .card-body {
+	margin: 0;
+	padding: .5em;
+}
+
+.card > .card-img {
+	width: 100%;
+}
+.card:hover {
+	/* transform: scale(1.01); */
+	box-shadow: 0 0 .2em .3em var(--col-secondary);
+}
+
+
+/* contact */
+
+.svg-link {
+	display: inline-block;
+	position: relative;
+}
+.svg-link > a {
+	text-decoration: none;
+	transition: var(--transition-fast);
+}
+
+.svg-link::after {
+	pointer-events: none;
+}
+
+.svg-link::after,
+.svg-link > svg {
+	transition: var(--transition-fast);
+}
+
+.svg-link::after {
+	white-space: nowrap;
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	transform: translate(-50%, 100%);
+	content: attr(data-tooltip);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.svg-link:hover::after {
+	visibility: visible;
+	opacity: 1;
+}
+
+#contact > ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#contact > ul > li > a > svg {
+	height: 2.5em;
 }

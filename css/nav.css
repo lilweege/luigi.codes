@@ -37,11 +37,13 @@ html {
 
 nav {
 	position: fixed;
-	padding: 1em 1.5em;
+	padding: .75em 1.5em;
 	line-height: 2em;
+	font-size: 1.1em;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+	z-index: 1000;
 }
 
 nav::after {
@@ -65,14 +67,27 @@ nav > ul {
 	float: right;
 }
 
-nav > ul > li > a {
+nav > ul > li {
 	color: var(--col-text);
+	fill: var(--col-text);
+	stroke: var(--col-text);
+}
+
+nav > ul > li:last-child {
+	color: var(--col-link);
+	fill: var(--col-link);
+	stroke: var(--col-link);
+}
+
+nav > ul > li > a {
+	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
 	position: relative;
 	outline: 0;
 	transition: var(--transition);
 }
+
 
 
 nav > ul > li > a:focus,
@@ -121,10 +136,11 @@ nav > ul.big {
 nav > ul.small {
 	display: none;
 }
+
 nav > ul.small > li > a > svg {
 	height: 1.7em;
-	stroke: var(--col-text);
-	fill: var(--col-text);
+	stroke: inherit;
+	fill: inherit;
 	transition: var(--transition);
 }
 
@@ -134,8 +150,7 @@ nav > ul.small > li > a:hover > svg {
 	transition: var(--transition);
 }
 
-@media screen and (max-width: 500px) {
-	
+@media screen and (max-width: 575px) {
 	nav > ul.big {
 		display: none;
 	}

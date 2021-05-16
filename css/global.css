@@ -3,14 +3,16 @@
 :root {
 	--col-neutral-100: white;
 	--col-neutral-200: #eee;
+	--col-neutral-300: #dce1ee;
 	--col-neutral-500: #393e46;
-	--col-neutral-800: #232931;
+	--col-neutral-700: #232931;
+	--col-neutral-800: #1d232e;
 	--col-neutral-900: black;
 	--col-accent-200: #aff;
 	--col-accent-300: #7dd;
 	--col-accent-400: #91c6f1;
 	--col-accent-500: #608aca;
-	--col-accent-600: #3e76ca;
+	--col-accent-600: #3066b8;
 	--col-accent-700: #7c69c2;
 	--col-accent-800: #5c3a92;
 	--col-accent-900: #4b1b64;
@@ -21,29 +23,26 @@
 
 :root {
 	--col-bg: var(--col-neutral-200);
-	--col-text: var(--col-neutral-800);
+	--col-secondary: var(--col-neutral-300);
+	--col-text: var(--col-neutral-700);
 	--col-link: var(--col-accent-800);
 	--col-link-hover: var(--col-accent-600);
 	--col-selection: var(--col-accent-400);
 }
 
 :root [data-theme='dark'] {
-	--col-bg: var(--col-neutral-800);
+	--col-bg: var(--col-neutral-700);
+	--col-secondary: var(--col-neutral-800);
 	--col-text: var(--col-neutral-200);
 	--col-link: var(--col-accent-400);
 	--col-link-hover: var(--col-accent-200);
 	--col-selection: var(--col-accent-700);
 }
 
-::selection {
-	background: var(--col-selection);
-}
-
-
-
 html {
 	scroll-behavior: smooth;
 }
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: unset;
@@ -54,6 +53,10 @@ html {
 	}
 }
 
+::selection {
+	background: var(--col-selection);
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -62,7 +65,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Courier Prime', monospace;
-	font-size: clamp(1em, 2.75vw, 1.3em);
+	font-size: clamp(1em, 2.75vw, 1.2em);
 	background-color: var(--col-bg);
 	color: var(--col-text);
 	transition:
