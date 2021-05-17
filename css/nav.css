@@ -59,6 +59,14 @@ nav::after {
 	transition: var(--transition);
 }
 
+/* no browser supports this yet */
+@media (prefers-reduced-transparency: reduce) {
+	nav::after {
+		opacity: 1;
+	}
+}
+
+
 nav > ul {
 	margin: 0;
 	padding: 0;
