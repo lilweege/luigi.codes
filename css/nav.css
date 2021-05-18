@@ -1,21 +1,28 @@
 /* dark switch */
 
+.dark-stuff {
+	position: relative;
+	height: 100%;
+	display: inline-block;
+}
+
 #darkSwitch {
 	/* display: none; */
 	opacity: 0;
-	width: 0;
+	/* firefox doesn't like width 0 here */
+	/* width: 0; */
+	/* height: 0; */
 	margin: 0;
-}
-
-#darkLabel {
-	position: relative;
+	pointer-events: none;
 }
 
 #darkLabel::after {
 	cursor: pointer;
 	content: attr(data-unchecked);
-	transition: 100ms;
+	transition: var(--transition-fast);
 	position: absolute;
+	left: -.5ch;
+	bottom: 0;
 }
 
 #darkSwitch:checked ~ #darkLabel::after {

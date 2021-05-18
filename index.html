@@ -26,15 +26,43 @@
 </head>
 <body>
 
+	<script type="text/javascript">
+		// disable transition so that background doesn't flicker
+		document.body.classList.add("preload")
+		window.addEventListener('load', () => {
+			document.body.classList.remove("preload");
+		})
+	</script>
 
 	<!-- NAV -->
 
 	<nav>
-		<span>
+		<div class="dark-stuff">
 			<input type="checkbox" id="darkSwitch"/>
 			<label title="Toggle theme" for="darkSwitch" id="darkLabel" data-checked="☀️" data-unchecked="🌙"></label>
 			<script src="/js/dark.js"></script>
-		</span>
+			<noscript>
+				<style>
+					/* can't rely on dark.js to set data theme */
+					/* dark will be default, but still honor light preference here manually */
+
+					/* TODO: don't forget to keep these up to date with global.css */
+					@media (prefers-color-scheme: light) {
+						:root {
+							--col-bg: var(--col-neutral-200);
+							--col-secondary: var(--col-neutral-300);
+							--col-text: var(--col-neutral-700);
+							--col-link: var(--col-accent-800);
+							--col-link-hover: var(--col-accent-600);
+							--col-selection: var(--col-accent-400);
+						}
+					}
+					
+					/* don't show the switch cause it won't work anyways */
+					.dark-stuff { display: none; }
+				</style>
+			</noscript>
+		</div>
 		<ul class="big">
 			<li><a href="#about">About</a></li>
 			<li><a href="#projects">Projects</a></li>

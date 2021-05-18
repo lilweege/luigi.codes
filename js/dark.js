@@ -6,11 +6,11 @@ const LIGHT = 'light'
 const setTheme = (currentTheme) => {
 	if (currentTheme === LIGHT) {
 		localStorage.setItem(THEME, LIGHT)
-		document.body.removeAttribute('data-theme')
+		document.body.setAttribute('data-theme', 'light')
 	}
 	else {
 		localStorage.setItem(THEME, DARK)
-		document.body.setAttribute('data-theme', 'dark')
+		document.body.removeAttribute('data-theme')
 	}
 }
 
@@ -24,7 +24,7 @@ const setTheme = (currentTheme) => {
 	}
 	setTheme(currentTheme)
 	
-	// const darkSwitch = document.getElementById('darkSwitch')
+	const darkSwitch = document.getElementById('darkSwitch')
 	if (darkSwitch) {
 		darkSwitch.checked = currentTheme === DARK
 		darkSwitch.addEventListener('change', () => {

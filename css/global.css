@@ -21,16 +21,31 @@
 	--transition-fast: 100ms;
 }
 
-:root {
-	--col-bg: var(--col-neutral-200);
-	--col-secondary: var(--col-neutral-300);
-	--col-text: var(--col-neutral-700);
-	--col-link: var(--col-accent-800);
-	--col-link-hover: var(--col-accent-600);
-	--col-selection: var(--col-accent-400);
+
+html {
+	scroll-behavior: smooth;
 }
 
-:root [data-theme='dark'] {
+.preload {
+	--transition: 0ms;
+	--transition-fast: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: unset;
+	}
+	
+	:root {
+		--transition: 0ms;
+		--transition-fast: 0ms;
+	}
+}
+
+/* no need for a media query here unless javascript is disabled */
+/* there should be a noscript tag in the markup with inline styles in this case */
+
+:root {
 	--col-bg: var(--col-neutral-700);
 	--col-secondary: var(--col-neutral-800);
 	--col-text: var(--col-neutral-200);
@@ -39,18 +54,13 @@
 	--col-selection: var(--col-accent-700);
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: unset;
-	}
-	:root {
-		--transition: 0ms;
-		--transition-fast: 0ms;
-	}
+:root [data-theme='light'] {
+	--col-bg: var(--col-neutral-200);
+	--col-secondary: var(--col-neutral-300);
+	--col-text: var(--col-neutral-700);
+	--col-link: var(--col-accent-800);
+	--col-link-hover: var(--col-accent-600);
+	--col-selection: var(--col-accent-400);
 }
 
 ::selection {
