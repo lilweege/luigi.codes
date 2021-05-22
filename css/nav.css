@@ -1,3 +1,12 @@
+
+main {
+	padding-top: 4em;
+}
+
+section:first-of-type {
+	scroll-margin-top: 999em;
+}
+
 /* dark switch */
 
 .dark-stuff {
@@ -74,7 +83,7 @@ nav::after {
 }
 
 
-nav > ul {
+nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -82,19 +91,19 @@ nav > ul {
 	float: right;
 }
 
-nav > ul > li {
+nav li {
 	color: var(--col-text);
 	fill: var(--col-text);
 	stroke: var(--col-text);
 }
 
-nav > ul > li:last-child {
+nav li:last-child {
 	color: var(--col-link);
 	fill: var(--col-link);
 	stroke: var(--col-link);
 }
 
-nav > ul > li > a {
+nav a {
 	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
@@ -105,12 +114,12 @@ nav > ul > li > a {
 
 
 
-nav > ul > li > a:focus,
-nav > ul > li > a:hover {
+nav a:focus,
+nav a:hover {
 	color: var(--col-link-hover);
 }
 
-nav > ul > li > a::before {
+nav a::before {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -124,42 +133,34 @@ nav > ul > li > a::before {
 	transition: var(--transition-fast);
 }
 
-nav > ul > li > a:hover::before,
-nav > ul > li > a:focus::before {
+nav a:hover::before,
+nav a:focus::before {
 	width: 100%;
 }
 
 
 
-nav > ul > li {
+nav li {
 	padding-left: 1.5em;
 }
 
-@media screen and (max-width: 320px) {
-	nav > ul {
-		width: calc(100% - 2em);
-		justify-content: space-between;
-	}
-	nav > ul > li {
-		padding: 0;
-	}
-}
 
-nav > ul.big {
+
+nav ul.big {
 	display: flex;
 }
-nav > ul.small {
+nav ul.small {
 	display: none;
 }
 
-nav > ul.small > li > a > svg {
+nav ul.small a svg {
 	height: 1.7em;
 	stroke: inherit;
 	fill: inherit;
 	transition: var(--transition);
 }
 
-nav > ul.small > li > a:hover > svg {
+nav ul.small a:hover svg {
 	stroke: var(--col-link-hover);
 	fill: var(--col-link-hover);
 	transition: var(--transition);

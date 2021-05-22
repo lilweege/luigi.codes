@@ -1,6 +1,12 @@
 /* https://codepen.io/P1N2O/pen/pyBNzX */
 /* https://linktr.ee/laclippers */
 
+@font-face {
+	font-family: CourierPrime;
+	src: url("/fonts/CourierPrime-Regular.ttf");
+	font-display: swap;
+}
+
 body {
 	margin: 0px;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);

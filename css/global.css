@@ -82,7 +82,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: CourierPrime;
-	font-size: clamp(1em, 2.75vw, 1.2em);
+	font-size: clamp(16px, 2.75vw, 22px);
 	background-color: var(--col-bg);
 	color: var(--col-text);
 	transition:
@@ -90,6 +90,16 @@ body {
 		background-color var(--transition);
 }
 
+p {
+	max-width: 60ch;
+	line-height: 1.25em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3 {
+	line-height: 1em;
+}
 h1 { font-size: 1.4em; }
 h2 { font-size: 1.3em; }
 h3 { font-size: 1.2em; }
@@ -99,4 +109,19 @@ a {
 }
 a:hover {
 	color: var(--col-link-hover);
+}
+
+section {
+	/* margin collapses */
+	padding-bottom: 10em;
+}
+
+article, footer {
+	margin: 0 auto;
+	padding: 1.5em;
+	max-width: 100ch;
+}
+
+.text-center {
+	text-align: center;   
 }
