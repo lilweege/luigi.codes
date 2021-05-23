@@ -54,8 +54,8 @@ html {
 nav {
 	position: fixed;
 	padding: .75em 1.5em;
-	line-height: 2em;
-	font-size: 1.1em;
+	line-height: 2rem;
+	font-size: 1.1rem;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
@@ -153,8 +153,13 @@ nav ul.small {
 	display: none;
 }
 
+nav ul.small a {
+	display: block;
+	height: 1.7rem;
+}
+
 nav ul.small a svg {
-	height: 1.7em;
+	height: 100%;
 	stroke: inherit;
 	fill: inherit;
 	transition: var(--transition);

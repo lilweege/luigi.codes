@@ -78,11 +78,14 @@ html {
 	font-display: swap;
 }
 
+html {
+	font-size: clamp(16px, 2.5vw, 22px);
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: CourierPrime;
-	font-size: clamp(16px, 2.75vw, 22px);
 	background-color: var(--col-bg);
 	color: var(--col-text);
 	transition:
@@ -98,11 +101,11 @@ p {
 }
 
 h1, h2, h3 {
-	line-height: 1em;
+	line-height: 1rem;
 }
-h1 { font-size: 1.4em; }
-h2 { font-size: 1.3em; }
-h3 { font-size: 1.2em; }
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.2rem; }
 
 a {
 	color: var(--col-link);

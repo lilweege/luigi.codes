@@ -2,7 +2,7 @@
 /* yeah lol */
 @media screen and (max-width: 350px) {
 	nav ul {
-		width: calc(100% - 2em);
+		width: calc(100% - 2rem);
 		justify-content: space-between;
 	}
 	nav li {
@@ -89,7 +89,7 @@
 }
 
 .card-body {
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .card-img {
@@ -98,7 +98,7 @@
 }
 
 .card-header {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	font-weight: 600;
 	line-height: 1em;
 }
