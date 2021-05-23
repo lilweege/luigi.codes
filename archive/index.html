@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<title>Luigi Quattrociocchi</title>
+
+	<meta name="author" content="Luigi Quattrociocchi">
+	<meta name="title" content="Luigi Quattrociocchi">
+	<meta name="description" content="Engineering Student at McMaster University. Looking for co-op opportunities.">
+	<meta name="keywords" content="ENGINEERING, CODING, JAVASCRIPT, MECHATRONICS, SOFTWARE, STUDENT">
+	<meta name="image" content="https://luigi.codes/img/headshot.jpg">
+	<meta name="url" content="https://luigi.codes">
+	<meta name="type" content="website">
+
+	<meta property="og:title" content="Luigi Quattrociocchi">
+	<meta property="og:description" content="Engineering Student at McMaster University. Looking for co-op opportunities.">
+	<meta property="og:image" content="https://luigi.codes/img/headshot.jpg">
+	<meta property="og:url" content="https://luigi.codes">
+
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/nav.css">
+	<link rel="stylesheet" href="/css/archive.css">
+</head>
+<body>
+	
+	<script type="text/javascript">
+		// disable transition so that background doesn't flicker
+		document.body.classList.add("preload")
+		window.addEventListener('load', () => {
+			document.body.classList.remove("preload");
+		})
+	</script>
+
+	<!-- NAV -->
+
+	<nav>
+		<div class="dark-stuff">
+			<input type="checkbox" id="darkSwitch"/>
+			<label title="Toggle theme" for="darkSwitch" id="darkLabel" data-checked="☀️" data-unchecked="🌙"></label>
+			<script src="/js/dark.js"></script>
+			<noscript>
+				<style>
+					/* can't rely on dark.js to set data theme */
+					/* dark will be default, but still honor light preference here manually */
+
+					/* TODO: don't forget to keep these up to date with global.css */
+					@media (prefers-color-scheme: light) {
+						:root {
+							--col-bg: var(--col-neutral-200);
+							--col-secondary: var(--col-neutral-300);
+							--col-text: var(--col-neutral-700);
+							--col-link: var(--col-accent-800);
+							--col-link-hover: var(--col-accent-600);
+							--col-selection: var(--col-accent-400);
+						}
+					}
+					
+					/* don't show the switch cause it won't work anyways */
+					.dark-stuff { display: none; }
+				</style>
+			</noscript>
+		</div>
+		<ul class="big">
+			<li><a href="/">Home</a></li>
+			<li><a href="/Luigi Quattrociocchi Resume.pdf">Resume</a></li>
+		</ul>
+		<ul class="small">
+			<li><a title="Home" href="/">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+					<circle cx="128" cy="128" r="96" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+					<polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" points="120 120 128 120 128 176 136 176"/>
+					<circle cx="128" cy="84" r="12"/>
+				</svg>
+			</a></li>
+			<li><a title="Resume" href="/Luigi Quattrociocchi Resume.pdf">
+				<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 80 80" viewBox="0 0 80 80">
+					<path d="M12,7v66c0,1.1044922,0.8955078,2,2,2h52c1.1044922,0,2-0.8955078,2-2V7c0-1.1044922-0.8955078-2-2-2H14C12.8955078,5,12,5.8955078,12,7z M16,9h48v62H16V9z"/>
+					<path d="M32.769043 31c2.1689453 0 4.2553711-.9448242 5.7241211-2.5927734.7348633-.8242188.6621094-2.0883789-.1625977-2.8237305-.8232422-.734375-2.0883789-.6616211-2.8237305.1625977C34.7861328 26.5546875 33.8139648 27 32.769043 27 30.690918 27 29 25.2055664 29 23s1.690918-4 3.769043-4c1.0449219 0 2.0170898.4453125 2.737793 1.2539062.7353516.824707 2.0004883.8969727 2.8237305.1625977.824707-.7353516.8974609-1.9995117.1625977-2.8237305C37.0244141 15.9448242 34.9379883 15 32.769043 15 28.4853516 15 25 18.5888672 25 23S28.4853516 31 32.769043 31zM46.1538086 29.769043C46.4643555 30.5146484 47.1923828 31 48 31s1.5356445-.4853516 1.8461914-1.230957l5-12c.4248047-1.0195312-.0571289-2.1904297-1.0771484-2.6152344s-2.1899414.0581055-2.6152344 1.0771484L48 23.7998047l-3.1538086-7.5688477c-.4257812-1.0195312-1.5957031-1.5004883-2.6152344-1.0771484-1.0200195.4248047-1.5019531 1.5957031-1.0771484 2.6152344L46.1538086 29.769043zM59 39H21c-1.1044922 0-2 .8955078-2 2s.8955078 2 2 2h38c1.1044922 0 2-.8955078 2-2S60.1044922 39 59 39zM59 50H21c-1.1044922 0-2 .8955078-2 2s.8955078 2 2 2h38c1.1044922 0 2-.8955078 2-2S60.1044922 50 59 50zM59 61H21c-1.1044922 0-2 .8955078-2 2s.8955078 2 2 2h38c1.1044922 0 2-.8955078 2-2S60.1044922 61 59 61z"/>
+				</svg>
+			</a></li>
+		</ul>
+		<!-- <script>
+			const deselect = e => e.target.blur()
+			for (let elm of [...document.getElementsByTagName('a'), darkSwitch])
+				elm.addEventListener('click', deselect)
+		</script> -->
+	</nav>
+
+
+	<!-- MAIN -->
+
+	<main>
+		<article>
+			<section id="retired">
+				<h1 class="text-center">A few retired projects</h1>
+				<p class="text-center">Some projects that didn't make it to the front page.</p>
+				<div class="card-holder">
+					<div>
+						<p><a href="https://github.com/lilweege/arduino-led-demo">Arduino LED Sequencer</a></p>
+						<p>An Arduino project that will read a sequence of data off an SD card, then output pattern to a strip of WS2811 LEDs.</p>
+					</div>
+					<div>
+						<p><a href="https://github.com/lilweege/circuit-diagram-app">Circuit Diagram Quizzer</a></p>
+						<p>A C# windows form application that generated various circuit diagrams and will test the user to enter their own values.</p>
+					</div>
+					<div>
+						<p><a href="https://github.com/lilweege/pace-calculator-android">Pace Calculator App</a></p>
+						<p>An Android application used to convert time/distance/pace I created for my own cross country / track & field training.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="eng1p13">
+				<h1 class="text-center">1P13 Portfolio</h1>
+				<span class="text-center">
+					<p class="text-center">My 2020 McMaster ENGINEERING 1P13 Design Project Portfolio.</p>
+					<p><b>P1: Renewable Technology Challenge</b> - Mechanical design of turbine blades in renewable wind technology.</p>
+					<p><b>P2: Get a Grip</b> - Design a System for Sterilizing Surgical Toolsusing Remote Sensing and Actuation.</p>
+					<p><b>P3: There's a Recyclable Among Us</b> - Design a System for Sorting and Recycling Containers.</p>
+					<p><b>P4: Power in Community</b> - Create a design solution to solve a client's problem.</p>
+				</span>
+				
+				<div class="flex-container">
+					<aside class="flex-left">
+						<span>
+							<h3>Project 1</h3>
+							<ul>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone0.pdf" target="eng1p13-frame">Milestone 0</a></li>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone1.pdf" target="eng1p13-frame">Milestone 1</a></li>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone2.pdf" target="eng1p13-frame">Milestone 2</a></li>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone3A.pdf" target="eng1p13-frame">Milestone 3A</a></li>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone3B.pdf" target="eng1p13-frame">Milestone 3B</a></li>
+								<li><a href="/portfolio-files/Tues-36_P1_Milestone4.pdf" target="eng1p13-frame">Milestone 4</a></li>
+								<!-- <li><a href="/portfolio-files/quattrl_P1_Milestone1.pdf" target="eng1p13-frame">Individual 1</a></li>
+								<li><a href="/portfolio-files/quattrl_P1_Milestone3A.pdf" target="eng1p13-frame">Individual 3A</a></li>
+								<li><a href="/portfolio-files/quattrl_P1_Milestone4.pdf" target="eng1p13-frame">Individual 4</a></li> -->
+								<li><a href="/portfolio-files/Tues-36_P1_DesignSummary.pdf" target="eng1p13-frame">Design Summary</a></li>
+							</ul>
+						</span>
+						<span>
+							<h3>Project 2</h3>
+							<ul>
+								<li><a href="/portfolio-files/Tues-28_P2_Milestone0.pdf" target="eng1p13-frame">Milestone 0</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_Milestone1.pdf" target="eng1p13-frame">Milestone 1</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_Milestone2.pdf" target="eng1p13-frame">Milestone 2</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_Milestone3.pdf" target="eng1p13-frame">Milestone 3</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_Milestone4.pdf" target="eng1p13-frame">Milestone 4</a></li>
+								<li><a href="/portfolio-files/quattrl_P2_ResearchSummary.pdf" target="eng1p13-frame">Research Summ</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_CAD_Files.zip" target="eng1p13-frame">Solid Model</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_Python_Program.zip" target="eng1p13-frame">Python Code</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_DesignReport.pdf" target="eng1p13-frame">Design Report</a></li>
+								<li><a href="/portfolio-files/Tues-28_P2_LogBook.pdf" target="eng1p13-frame">Log Book</a></li>
+							</ul>
+						</span>
+						<span>
+							<h3>Project 3</h3>
+							<ul>
+								<li><a href="/portfolio-files/Tues-33_P3_Milestone0.pdf" target="eng1p13-frame">Milestone 0</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_Milestone1.pdf" target="eng1p13-frame">Milestone 1</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_Milestone2.pdf" target="eng1p13-frame">Milestone 2</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_Milestone3.pdf" target="eng1p13-frame">Milestone 3</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_Milestone4.pdf" target="eng1p13-frame">Milestone 4</a></li>
+								<li><a href="/portfolio-files/quattrl_P3_ResearchSummary.pdf" target="eng1p13-frame">Research Summ</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_CAD_Files.zip" target="eng1p13-frame">Solid Model</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_Python_Program.zip" target="eng1p13-frame">Python Code</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_DesignReport.pdf" target="eng1p13-frame">Design Report</a></li>
+								<li><a href="/portfolio-files/Tues-33_P3_LogBook.pdf" target="eng1p13-frame">Log Book</a></li>
+							</ul>
+						</span>
+						<span>
+							<h3>Project 4</h3>
+							<ul>
+								<li><a href="/portfolio-files/Tues-31_P4_Milestone0.pdf" target="eng1p13-frame">Milestone 0</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_Milestone1.pdf" target="eng1p13-frame">Milestone 1</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_Milestone2.pdf" target="eng1p13-frame">Milestone 2</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_Milestone3.pdf" target="eng1p13-frame">Milestone 3</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_Milestone4.pdf" target="eng1p13-frame">Milestone 4</a></li>
+								<!-- <li><a href="/portfolio-files/quattrl_P4_Milestone1.pdf" target="eng1p13-frame">Individual 1</a></li>
+								<li><a href="/portfolio-files/quattrl_P4_Milestone2.pdf" target="eng1p13-frame">Individual 2</a></li>
+								<li><a href="/portfolio-files/quattrl_P4_Milestone3.pdf" target="eng1p13-frame">Individual 3</a></li> -->
+								<li><a href="/portfolio-files/quattrl_P4_Reflection.pdf" target="eng1p13-frame">Reflection</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_FinalPresentation.mp4" target="eng1p13-frame">Video Pitch</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_DesignReport.pdf" target="eng1p13-frame">Design Report</a></li>
+								<li><a href="/portfolio-files/Tues-31_P4_LogBook.pdf" target="eng1p13-frame">Log Book</a></li>
+							</ul>
+						</span>
+					</aside>
+					<div class="flex-right">
+						<div class="frame-wrapper">
+							<iframe class="frame" name="eng1p13-frame" width="100%" height="100%" src="/portfolio-files/Tues-36_P1_Milestone0.pdf" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</article>
+	</main>
+
+
+	<!-- FOOTER -->
+
+	<footer>
+		<span>&nbsp;<a style="float: right;" href="#">Back to top</a></span>
+	</footer>
+
+</body>
+</html>

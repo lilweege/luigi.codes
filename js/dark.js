@@ -1,29 +1,35 @@
-const darkSwitch = document.getElementById('darkSwitch');
-const mainNav = document.getElementById("main-nav");
+// local storage key/vals
+const THEME = 'theme'
+const DARK = 'dark'
+const LIGHT = 'light'
 
-window.addEventListener('load', () => {
-	if (darkSwitch) {
-		darkSwitch.checked = localStorage.getItem('darkSwitch') === 'dark';
-		setTheme();
-		darkSwitch.addEventListener('change', setTheme);
-	}
-});
-
-const setTheme = () => {
-	if (darkSwitch.checked) {
-		localStorage.setItem('darkSwitch', 'dark');
-		document.body.setAttribute('data-theme', 'dark');
-		mainNav.classList.remove("navbar-light");
-		mainNav.classList.remove("bg-light");
-		mainNav.classList.add("navbar-dark");
-		mainNav.classList.add("bg-dark");
+const setTheme = (currentTheme) => {
+	if (currentTheme === LIGHT) {
+		localStorage.setItem(THEME, LIGHT)
+		document.body.setAttribute('data-theme', 'light')
 	}
 	else {
-		localStorage.removeItem('darkSwitch');
-		document.body.removeAttribute('data-theme');
-		mainNav.classList.remove("navbar-dark");
-		mainNav.classList.remove("bg-dark");
-		mainNav.classList.add("navbar-light");
-		mainNav.classList.add("bg-light");
+		localStorage.setItem(THEME, DARK)
+		document.body.removeAttribute('data-theme')
 	}
 }
+
+;(() => {
+	let currentTheme = localStorage.getItem(THEME)
+
+	if (!currentTheme) { // first time visitor
+		const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
+		// if no-preference, theme will be set to dark
+		currentTheme = prefersLight ? LIGHT : DARK
+	}
+	setTheme(currentTheme)
+	
+	const darkSwitch = document.getElementById('darkSwitch')
+	if (darkSwitch) {
+		darkSwitch.checked = currentTheme === DARK
+		darkSwitch.addEventListener('change', () => {
+			setTheme(darkSwitch.checked ? DARK : LIGHT)
+		})
+	}
+})()
+

@@ -1,0 +1,127 @@
+/* general styling */
+
+:root {
+	--col-neutral-100: white;
+	--col-neutral-200: #eee;
+	--col-neutral-300: #dce1ee;
+	--col-neutral-500: #393e46;
+	--col-neutral-700: #232931;
+	--col-neutral-800: #1d232e;
+	--col-neutral-900: black;
+	--col-accent-200: #aff;
+	--col-accent-300: #7dd;
+	--col-accent-400: #91c6f1;
+	--col-accent-500: #608aca;
+	--col-accent-600: #3066b8;
+	--col-accent-700: #7c69c2;
+	--col-accent-800: #5c3a92;
+	--col-accent-900: #4b1b64;
+
+	--transition: 200ms;
+	--transition-fast: 100ms;
+}
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+.preload {
+	--transition: 0ms;
+	--transition-fast: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: unset;
+	}
+	
+	:root {
+		--transition: 0ms;
+		--transition-fast: 0ms;
+	}
+}
+
+/* no need for a media query here unless javascript is disabled */
+/* there should be a noscript tag in the markup with inline styles in this case */
+
+:root {
+	--col-bg: var(--col-neutral-700);
+	--col-secondary: var(--col-neutral-800);
+	--col-text: var(--col-neutral-200);
+	--col-link: var(--col-accent-400);
+	--col-link-hover: var(--col-accent-200);
+	--col-selection: var(--col-accent-700);
+}
+
+:root [data-theme='light'] {
+	--col-bg: var(--col-neutral-200);
+	--col-secondary: var(--col-neutral-300);
+	--col-text: var(--col-neutral-700);
+	--col-link: var(--col-accent-800);
+	--col-link-hover: var(--col-accent-600);
+	--col-selection: var(--col-accent-400);
+}
+
+::selection {
+	background: var(--col-selection);
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+@font-face {
+	font-family: CourierPrime;
+	src: url("/fonts/CourierPrime-Regular.ttf");
+	font-display: swap;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: CourierPrime;
+	font-size: clamp(16px, 2.75vw, 22px);
+	background-color: var(--col-bg);
+	color: var(--col-text);
+	transition:
+		color var(--transition),
+		background-color var(--transition);
+}
+
+p {
+	max-width: 60ch;
+	line-height: 1.25em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3 {
+	line-height: 1em;
+}
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+
+a {
+	color: var(--col-link);
+}
+a:hover {
+	color: var(--col-link-hover);
+}
+
+section {
+	/* margin collapses */
+	padding-bottom: 10em;
+}
+
+article, footer {
+	margin: 0 auto;
+	padding: 1.5em;
+	max-width: 100ch;
+}
+
+.text-center {
+	text-align: center;   
+}

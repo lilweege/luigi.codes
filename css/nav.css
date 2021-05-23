@@ -1,0 +1,176 @@
+
+main {
+	padding-top: 4em;
+}
+
+section:first-of-type {
+	scroll-margin-top: 999em;
+}
+
+/* dark switch */
+
+.dark-stuff {
+	position: relative;
+	height: 100%;
+	display: inline-block;
+}
+
+#darkSwitch {
+	/* display: none; */
+	opacity: 0;
+	/* firefox doesn't like width 0 here */
+	/* width: 0; */
+	/* height: 0; */
+	margin: 0;
+	pointer-events: none;
+}
+
+#darkLabel::after {
+	cursor: pointer;
+	content: attr(data-unchecked);
+	transition: var(--transition-fast);
+	position: absolute;
+	left: -.5ch;
+	bottom: 0;
+}
+
+#darkSwitch:checked ~ #darkLabel::after {
+	content: attr(data-checked);
+}
+
+#darkSwitch:hover ~ #darkLabel::after,
+#darkSwitch:focus ~ #darkLabel::after,
+#darkLabel:hover ~ #darkLabel::after,
+#darkLabel:focus ~ #darkLabel::after {
+	transform: scale(1.25);
+}
+
+/* nav stuff */
+
+html {
+	scroll-padding-top: 6em;
+}
+
+nav {
+	position: fixed;
+	padding: .75em 1.5em;
+	line-height: 2em;
+	font-size: 1.1em;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+nav::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--col-bg);
+	z-index: -1;
+	opacity: 0.75;
+	transition: var(--transition);
+}
+
+/* no browser supports this yet */
+@media (prefers-reduced-transparency: reduce) {
+	nav::after {
+		opacity: 1;
+	}
+}
+
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	float: right;
+}
+
+nav li {
+	color: var(--col-text);
+	fill: var(--col-text);
+	stroke: var(--col-text);
+}
+
+nav li:last-child {
+	color: var(--col-link);
+	fill: var(--col-link);
+	stroke: var(--col-link);
+}
+
+nav a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	outline: 0;
+	transition: var(--transition);
+}
+
+
+
+nav a:focus,
+nav a:hover {
+	color: var(--col-link-hover);
+}
+
+nav a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	height: .15em;
+	border-radius: 999em;
+	transform: translate(-50%, 100%);
+	background-color: var(--col-link-hover);
+	pointer-events: none;
+	transition: var(--transition-fast);
+}
+
+nav a:hover::before,
+nav a:focus::before {
+	width: 100%;
+}
+
+
+
+nav li {
+	padding-left: 1.5em;
+}
+
+
+
+nav ul.big {
+	display: flex;
+}
+nav ul.small {
+	display: none;
+}
+
+nav ul.small a svg {
+	height: 1.7em;
+	stroke: inherit;
+	fill: inherit;
+	transition: var(--transition);
+}
+
+nav ul.small a:hover svg {
+	stroke: var(--col-link-hover);
+	fill: var(--col-link-hover);
+	transition: var(--transition);
+}
+
+@media screen and (max-width: 575px) {
+	nav > ul.big {
+		display: none;
+	}
+	nav > ul.small {
+		display: flex;
+	}
+}

@@ -1,0 +1,94 @@
+/* https://codepen.io/P1N2O/pen/pyBNzX */
+/* https://linktr.ee/laclippers */
+
+@font-face {
+	font-family: CourierPrime;
+	src: url("/fonts/CourierPrime-Regular.ttf");
+	font-display: swap;
+}
+
+body {
+	margin: 0px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+	height: 100vh;
+	width: 100%;
+	font-family: CourierPrime;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 20% 50%;
+	}
+	50% {
+		background-position: 80% 50%;
+	}
+	100% {
+		background-position: 20% 50%;
+	}
+}
+
+.content {
+	margin: 0px auto;
+	padding: 0px 12px;
+	height:100%;
+	width: 100%;
+	max-width: 680px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	-webkit-box-align: center;
+	padding-top: 36px;
+	margin-bottom: 16px;
+}
+
+.profile-img {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+}
+
+.icon-img {
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 46px;
+	width: 46px;
+}
+
+.link-wrapper {
+	position: relative;
+	margin-bottom: 16px;
+	border-radius: 8px;
+	border: 2px solid black;
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.link-wrapper:hover {
+	color: white;
+	background-color: black;
+}
+
+.link {
+	display: inline-flex;
+	padding: 16px 66px;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	white-space: normal;
+	color: inherit;
+	height: auto;
+	position: relative;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}

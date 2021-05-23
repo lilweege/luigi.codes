@@ -1,0 +1,201 @@
+
+/* yeah lol */
+@media screen and (max-width: 350px) {
+	nav ul {
+		width: calc(100% - 2em);
+		justify-content: space-between;
+	}
+	nav li {
+		padding: 0;
+	}
+}
+
+
+/* about */
+
+.img-fluid {
+	width: 100%;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-col {
+	margin: 0;
+	padding: 1em;
+}
+
+.flex-col p {
+	margin: 0;
+}
+
+.flex-left {
+	width: 34%;
+	margin: auto;
+}
+
+.flex-right {
+	width: 66%;
+}
+
+
+@media screen and (max-width: 60em)  {
+	.flex-container {
+		flex-direction: column-reverse;
+	}
+	.flex-col {
+		width: 100%;
+	}
+	#about img {
+		width: 66%;
+	}
+}
+
+
+/* projects */
+
+.card-holder {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.card {
+	text-align: center;
+	margin: 1.25em 0.75em;
+	width: 12.5em;
+	max-width: 20em;
+	background-image: linear-gradient(to bottom, var(--col-secondary), var(--col-bg));
+	flex-grow: 1;
+	transition: var(--transition);
+	border-radius: .5em;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.card-header,
+.card-body,
+.card-link-holder {
+	margin: 0;
+	padding: .5em;
+}
+
+.card-body {
+	font-size: .9em;
+}
+
+.card-img {
+	width: 100%;
+	/* height: auto; */
+}
+
+.card-header {
+	font-size: 1.2em;
+	font-weight: 600;
+	line-height: 1em;
+}
+
+.card:hover {
+	/* transform: scale(1.01); */
+	box-shadow: 0 0 .2em .3em var(--col-secondary);
+}
+
+
+.card-link-holder {
+	bottom: 0;
+	right: 0;
+	flex-grow: 1;
+	display: flex;
+	align-items: flex-end;
+	/* margin-left: auto; */
+	justify-content: flex-end;
+}
+
+
+.card-link-holder span {
+	padding: 0;
+	display: flex;
+}
+
+.card-link-holder a {
+	pointer-events: none;
+	margin-left: .5em;
+}
+
+.card-link-holder span,
+.card-link-holder svg {
+	height: 1em;
+}
+.card-link-holder svg {
+	/* display: inline; */
+	width: 1em;
+	/* margin-left: .25em; */
+	transition: var(--transition);
+	pointer-events: all;
+	fill: var(--col-text);
+}
+
+.card-link-holder svg:hover {
+	fill: currentColor;
+}
+
+
+/* contact */
+
+.svg-link {
+	display: inline-block;
+	position: relative;
+}
+.svg-link a {
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+.svg-link::after {
+	pointer-events: none;
+}
+
+.svg-link::after,
+.svg-link > svg {
+	transition: var(--transition-fast);
+}
+
+.svg-link::after {
+	white-space: nowrap;
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+	transform: translate(-50%, 100%);
+	content: attr(data-tooltip);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.svg-link:hover::after {
+	visibility: visible;
+	opacity: 1;
+}
+
+#contact ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+#contact a {
+	fill: currentColor;
+}
+
+#contact a svg {
+	height: 3em;
+	fill: inherit;
+}
