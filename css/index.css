@@ -103,7 +103,8 @@
 	line-height: 1em;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
 	/* transform: scale(1.01); */
 	box-shadow: 0 0 .2em .3em var(--col-secondary);
 }
@@ -143,8 +144,9 @@
 	fill: var(--col-text);
 }
 
+.card-link-holder a:focus svg,
 .card-link-holder svg:hover {
-	fill: currentColor;
+	fill: var(--col-link-hover);
 }
 
 
@@ -179,7 +181,8 @@
 	opacity: 0;
 }
 
-.svg-link:hover::after {
+.svg-link:hover::after,
+.svg-link:focus-within::after {
 	visibility: visible;
 	opacity: 1;
 }
