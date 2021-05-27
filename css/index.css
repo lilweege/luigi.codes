@@ -127,7 +127,6 @@
 }
 
 .card-link-holder a {
-	pointer-events: none;
 	margin-left: .5em;
 }
 
@@ -140,7 +139,6 @@
 	width: 1em;
 	/* margin-left: .25em; */
 	transition: var(--transition);
-	pointer-events: all;
 	fill: var(--col-text);
 }
 
