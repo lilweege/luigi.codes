@@ -73,10 +73,19 @@ html {
 
 
 @font-face {
-	font-family: CourierPrime;
+	font-family: "Courier Prime";
 	src: url("/fonts/CourierPrime-Regular.ttf");
 	font-display: swap;
 }
+
+@font-face {
+	font-family: "Font Awesome 5 Free";
+	src: url("/fonts/fa-regular-400.ttf");
+	font-style: normal;
+	font-weight: 400;
+	/* font-display: block; */
+}
+
 
 html {
 	font-size: clamp(16px, 2.5vw, 22px);
@@ -85,7 +94,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: CourierPrime;
+	font-family: 'Courier Prime';
 	background-color: var(--col-bg);
 	color: var(--col-text);
 	transition:
