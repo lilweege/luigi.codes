@@ -40,7 +40,7 @@
 	<nav>
 		<div class="dark-stuff">
 			<input type="checkbox" id="darkSwitch"/>
-			<label title="Toggle theme" for="darkSwitch" id="darkLabel" data-checked="☀️" data-unchecked="🌙"></label>
+			<label title="Toggle theme" for="darkSwitch" id="darkLabel" data-checked="" data-unchecked=""></label>
 			<script src="/js/dark.js"></script>
 			<noscript>
 				<style>
@@ -83,11 +83,11 @@
 				</svg>
 			</a></li>
 		</ul>
-		<!-- <script>
+		<script>
 			const deselect = e => e.target.blur()
 			for (let elm of [...document.getElementsByTagName('a'), darkSwitch])
 				elm.addEventListener('click', deselect)
-		</script> -->
+		</script>
 	</nav>
 
 
