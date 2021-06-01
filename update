@@ -1,1 +1,1 @@
-rsync -urv --delete . root@luigi.codes:/var/www/luigi.codes
+rsync -zaurvP . root@luigi.codes:/var/www/luigi.codes
