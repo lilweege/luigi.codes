@@ -62,7 +62,6 @@ nav {
 	z-index: 1000;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 
 nav::after {
@@ -90,9 +89,7 @@ nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
-	float: right;
-
+	margin-left: auto;
 }
 
 nav li {
