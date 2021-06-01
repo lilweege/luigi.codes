@@ -24,6 +24,10 @@
 	<link rel="stylesheet" href="/css/global.css">
 	<link rel="stylesheet" href="/css/nav.css">
 	<link rel="stylesheet" href="/css/index.css">
+
+	<!-- TODO: switch to sal.js -->
+	<script src="/js/aos.js"></script>
+	<link rel="stylesheet" href="/css/aos.css">
 </head>
 <body>
 
@@ -32,6 +36,12 @@
 		document.body.classList.add("preload")
 		window.addEventListener('load', () => {
 			document.body.classList.remove("preload");
+		})
+	</script>
+	<script>
+		AOS.init({
+			once: true,
+			duration: "500"
 		})
 	</script>
 
@@ -126,11 +136,11 @@
 
 			<!-- ABOUT -->
 
-			<section id="about">
+			<section id="about" data-aos="fade" data-aos-duration="600">
 				<h1 class="text-center">A little bit about me</h1>
 				<div class="flex-container">
 					<div class="flex-col flex-left">
-						<img loading="lazy" class="img-fluid" src="/img/headshot.jpg" alt="a beautiful image of Luigi smiling">
+						<img class="img-fluid" src="/img/headshot.jpg" alt="a beautiful image of Luigi smiling">
 					</div>
 					<div class="flex-col flex-right">
 						<p>
@@ -173,9 +183,9 @@
 
 
 
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">A Bit Off</p>
-						<img loading="lazy" class="card-img" src="/img/projects/a_bit_off.jpg" alt="game title screen">
+						<img class="card-img" src="/img/projects/a_bit_off.jpg" alt="game title screen">
 						<p class="card-body">An educational game created with Java Swing for ICS12U final culminating project. It teaches the basic bitwise operators.</p>
 						<div class="card-link-holder">
 							<span>
@@ -188,9 +198,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">OpenGl Fluid Simulation</p>
-						<img loading="lazy" class="card-img" src="/img/projects/fluid_sim.png" alt="cube wih purple smoke inside">
+						<img class="card-img" src="/img/projects/fluid_sim.png" alt="cube wih purple smoke inside">
 						<p class="card-body">A realtime fluid dynamics visualization in 3d, compiled to javascript using emscripten.</p>
 						<div class="card-link-holder">
 							<span>
@@ -203,9 +213,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">Wolfen-Frogger</p>
-						<img loading="lazy" class="card-img" src="/img/projects/wolfen_frogger.png" alt="screenshot of game">
+						<img class="card-img" src="/img/projects/wolfen_frogger.png" alt="screenshot of game">
 						<p class="card-body">A 2D simple world visualized in 3D using 'raycasting', created in C++ using the oneLoneCoder Pixel Game Engine.</p>
 						<div class="card-link-holder">
 							<span>
@@ -218,9 +228,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">DM::OJ Solutions</p>
-						<img loading="lazy" class="card-img" src="/img/projects/dmoj.png" alt="DMOJ logo">
+						<img class="card-img" src="/img/projects/dmoj.png" alt="DMOJ logo">
 						<p class="card-body">A repository of solutions for various competitive programming problems. Most solutions are written in C++ and Python.</p>
 						<div class="card-link-holder">
 							<span>
@@ -233,9 +243,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">Double Pendulum Simulation</p>
-						<img loading="lazy" class="card-img" src="/img/projects/double_pendulum.png" alt="double pendulum in ubuntu terminal">
+						<img class="card-img" src="/img/projects/double_pendulum.png" alt="double pendulum in ubuntu terminal">
 						<p class="card-body">A simple kinimatic physics simulation written in C and rendered in a terminal emulator.</p>
 						<div class="card-link-holder">
 							<span>
@@ -248,9 +258,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">Oh Noah You Didn't</p>
-						<img loading="lazy" class="card-img" src="/img/projects/oh_noah.jpg" alt="screenshot of game">
+						<img class="card-img" src="/img/projects/oh_noah.jpg" alt="screenshot of game">
 						<p class="card-body">An online multiplayer game created for the Sheridan game-making contest. This game won the award for "Best Use Of Code".</p>
 						<div class="card-link-holder">
 							<span>
@@ -263,9 +273,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">All-In-One Music Aid</p>
-						<img loading="lazy" class="card-img" src="/img/projects/aio_music.jpg" alt="final prototype of music aid device">
+						<img class="card-img" src="/img/projects/aio_music.jpg" alt="final prototype of music aid device">
 						<p class="card-body">All in one device: musical tuner, metronome, and drone. Python GUI, Arduino, 3D printed enclosure.</p>
 						<div class="card-link-holder">
 							<span>
@@ -278,9 +288,9 @@
 							</span>
 						</div>
 					</div>
-					<div class="card">
+					<div class="card" data-aos="fade-up">
 						<p class="card-header">2D Maze Generator and Pathfinder</p>
-						<img loading="lazy" class="card-img" src="/img/projects/astar.jpg" alt="a randomly generated maze in solved state">
+						<img class="card-img" src="/img/projects/astar.jpg" alt="a randomly generated maze in solved state">
 						<p class="card-body">A* pathfinding algorithm and DFS maze generator on a 2D grid, wrapped in JS + DOM.</p>
 						<div class="card-link-holder">
 							<span>
