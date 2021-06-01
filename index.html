@@ -25,9 +25,6 @@
 	<link rel="stylesheet" href="/css/nav.css">
 	<link rel="stylesheet" href="/css/index.css">
 
-	<!-- TODO: switch to sal.js -->
-	<script src="/js/aos.js"></script>
-	<link rel="stylesheet" href="/css/aos.css">
 </head>
 <body>
 
@@ -38,12 +35,20 @@
 			document.body.classList.remove("preload");
 		})
 	</script>
+
+	<!-- TODO: switch to sal.js -->
+	<script src="/js/aos.js"></script>
 	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = '/css/aos.css';
+		document.head.appendChild(link);
 		AOS.init({
 			once: true,
-			duration: "500"
+			duration: 500
 		})
 	</script>
+
 
 	<!-- NAV -->
 
