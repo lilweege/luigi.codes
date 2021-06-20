@@ -50,6 +50,28 @@
 	</script> -->
 
 
+	<!-- BG (js only) -->
+	<div id="particle-bg"></div>
+
+	<script src="/js/particles.js"></script>
+	<script>
+		particlesJS.load("particle-bg", "/js/particlesjs-config.json", () => {
+			// let canvas = document.querySelector(".particles-js-canvas-el")
+			// ...
+		})
+	</script>
+	<style>
+		#particle-bg {
+			position: fixed;
+			inset: 0;
+			z-index: -1;
+		}
+		:root [data-theme='light'] #particle-bg {
+			filter: invert();
+		}
+	</style>
+
+
 	<!-- NAV -->
 
 	<nav>
