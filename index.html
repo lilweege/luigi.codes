@@ -36,18 +36,20 @@
 		})
 	</script>
 
-	<!-- TODO: fix buggy behavior -->
-	<!-- <script src="/js/aos.js"></script>
+	<script defer src="/js/scroll.js"></script>
 	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.href = '/css/aos.css';
-		document.head.appendChild(link);
-		AOS.init({
-			once: true,
-			duration: 500
-		})
-	</script> -->
+		const loadCss = href => {
+			let link = document.createElement('link')
+			link.rel = 'stylesheet'
+			link.href = href
+			document.head.appendChild(link)
+		}
+	</script>
+	<script defer>
+		// load within script tag for compatibility with disabled javascript
+		loadCss("/css/scroll.css")
+	</script>
+
 
 
 	<!-- BG (js only) -->
@@ -63,7 +65,11 @@
 	<style>
 		#particle-bg {
 			position: fixed;
-			inset: 0;
+			/* inset: 0; */
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
 			z-index: -1;
 		}
 		:root [data-theme='light'] #particle-bg {
@@ -165,7 +171,7 @@
 
 			<section id="about">
 				<h1 class="text-center">A little bit about me</h1>
-				<div class="flex-container" data-aos="fade">
+				<div class="flex-container fade">
 					<div class="flex-col flex-left">
 						<img class="img-fluid" src="/img/headshot.jpg" alt="a beautiful image of Luigi smiling">
 					</div>
