@@ -80,10 +80,11 @@ html {
 
 @font-face {
 	font-family: "Font Awesome 5 Free";
-	src: url("/fonts/fa-regular-400.ttf");
+	src: url("/fonts/fa-solid-900.woff2") format('woff2');
 	font-style: normal;
-	font-weight: 400;
-	/* font-display: block; */
+	font-weight: 900;
+	font-display: swap;
+	/* unicode-range: U+F185-F186; */
 }
 
 
