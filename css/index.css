@@ -29,6 +29,7 @@
 .flex-col {
 	margin: 0;
 	padding: 1em;
+	margin: auto;
 }
 
 .flex-col p {
@@ -37,7 +38,6 @@
 
 .flex-left {
 	width: 34%;
-	margin: auto;
 }
 
 .flex-right {
@@ -57,6 +57,51 @@
 	}
 }
 
+.down-arrow {
+	display: block;
+	margin: auto;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	position: relative;
+	animation: scrollIndicator 2s infinite;
+}
+.down-arrow::before,
+.down-arrow::after {
+	content: '';
+	position: absolute;
+	background: var(--col-text);
+	height: 1rem;
+	width: .1rem;
+	top: calc(50% - .5rem);
+	left: calc(50% - .05rem);
+	border-radius: 999em;
+	transform-origin: bottom;
+	--rotate-angle: 45deg;
+}
+
+.down-arrow::before {
+	transform: rotate(calc(-1 * var(--rotate-angle)));
+}
+
+.down-arrow::after {
+	transform: rotate(var(--rotate-angle));
+}
+
+@keyframes scrollIndicator {
+	0% {
+		opacity: 0.2;
+		top: 0;
+	}
+	50% {
+		opacity: 1.0;
+		top: .5rem;
+	}
+	100% {
+		opacity: 0.2;
+		top: 0;
+	}
+}
 
 /* projects */
 
