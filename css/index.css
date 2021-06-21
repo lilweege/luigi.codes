@@ -64,7 +64,7 @@
 	height: 1.5rem;
 	border-radius: 50%;
 	position: relative;
-	animation: scrollIndicator 2s infinite;
+	animation: scrollIndicator 5s infinite;
 }
 .down-arrow::before,
 .down-arrow::after {
@@ -77,7 +77,15 @@
 	left: calc(50% - .05rem);
 	border-radius: 999em;
 	transform-origin: bottom;
-	--rotate-angle: 45deg;
+	--rotate-angle: 37deg;
+	transition: transform var(--transition);
+}
+
+.down-arrow:hover::before,
+.down-arrow:hover::after,
+.down-arrow:focus::before,
+.down-arrow:focus::after {
+	--rotate-angle: 47deg;
 }
 
 .down-arrow::before {
@@ -94,8 +102,8 @@
 		top: 0;
 	}
 	50% {
-		opacity: 1.0;
-		top: .5rem;
+		opacity: 0.6;
+		top: .3rem;
 	}
 	100% {
 		opacity: 0.2;
