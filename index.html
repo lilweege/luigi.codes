@@ -57,10 +57,12 @@
 
 	<script src="/js/particles.js"></script>
 	<script>
-		particlesJS.load("particle-bg", "/js/particlesjs-config.json", () => {
-			// let canvas = document.querySelector(".particles-js-canvas-el")
-			// ...
-		})
+		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			particlesJS.load("particle-bg", "/js/particlesjs-config.json", () => {
+				// let canvas = document.querySelector(".particles-js-canvas-el")
+				// ...
+			})
+		}
 	</script>
 	<style>
 		#particle-bg {
@@ -415,13 +417,15 @@
 
 	<script type="text/javascript" src="/js/vanilla-tilt.js"></script>
 	<script>
-		VanillaTilt.init(document.querySelectorAll(".card"), {
-			gyroscope: false,
-			scale: 1,
-			max: 5,
-			glare: true,
-			"max-glare": .1
-		})
+		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				gyroscope: false,
+				scale: 1,
+				max: 5,
+				glare: true,
+				"max-glare": .1
+			})
+		}
 	</script>
 
 </body>
