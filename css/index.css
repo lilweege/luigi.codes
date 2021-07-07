@@ -83,8 +83,8 @@
 
 .down-arrow:hover::before,
 .down-arrow:hover::after,
-.down-arrow:focus::before,
-.down-arrow:focus::after {
+.down-arrow:focus-visible::before,
+.down-arrow:focus-visible::after {
 	--rotate-angle: 47deg;
 }
 
@@ -214,7 +214,7 @@
 	fill: var(--col-text);
 }
 
-.card-link-holder a:focus svg,
+.card-link-holder a:focus-visible svg,
 .card-link-holder svg:hover {
 	fill: var(--col-link-hover);
 }
@@ -252,7 +252,7 @@
 }
 
 .svg-link:hover::after,
-.svg-link:focus-within::after {
+.svg-link:focus-visible::after {
 	visibility: visible;
 	opacity: 1;
 }

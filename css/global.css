@@ -121,7 +121,7 @@ a {
 	color: var(--col-link);
 }
 a:hover,
-a:focus {
+a:focus-visible {
 	color: var(--col-link-hover);
 }
 

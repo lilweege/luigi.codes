@@ -39,9 +39,9 @@ section:first-of-type {
 }
 
 #darkSwitch:hover ~ #darkLabel::after,
-#darkSwitch:focus ~ #darkLabel::after,
+#darkSwitch:focus-visible ~ #darkLabel::after,
 #darkLabel:hover ~ #darkLabel::after,
-#darkLabel:focus ~ #darkLabel::after {
+#darkLabel:focus-visible ~ #darkLabel::after {
 	transform: scale(1.2) rotate(-15deg);
 }
 
@@ -115,7 +115,7 @@ nav a {
 
 
 
-nav a:focus,
+nav a:focus-visible,
 nav a:hover {
 	color: var(--col-link-hover);
 }
@@ -135,7 +135,7 @@ nav a::before {
 }
 
 nav a:hover::before,
-nav a:focus::before {
+nav a:focus-visible::before {
 	width: 100%;
 }
 
