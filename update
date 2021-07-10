@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -zaurvP . --exclude '.git' --exclude '.gitignore' root@luigi.codes:/var/www/luigi.codes 
+rsync -zaurvP . --exclude '.git' --exclude '.gitignore' luigi@luigi.codes:/var/www/luigi.codes
