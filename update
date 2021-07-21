@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -zaurvP . --exclude '.git*' luigi@luigi.codes:/var/www/luigi.codes
+rsync -zaurvP . --exclude '.git*' --exclude 'update' luigi@luigi.codes:/var/www/luigi.codes
